@@ -21,6 +21,10 @@ public class activity_data_item extends AppCompatActivity {
 
     Button btnSaveInfo;
 
+    boolean isUpdate;
+    int positionToUpdate;
+
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_item);
@@ -32,10 +36,29 @@ public class activity_data_item extends AppCompatActivity {
         editTextPhone=findViewById(R.id.editTextPhoneInfo);
         spinner=findViewById(R.id.spinnerInfo);
 
+        if(Singleton.getInstance().itemIndex != -1){
+            isUpdate=true;
+            positionToUpdate=Singleton.getInstance().itemIndex;
+            Item item=Singleton.getInstance().listItens.get(positionToUpdate);
+            fillFieldsUpdate(item,positionToUpdate);
+
+        }
     }
+    public void fillFieldsUpdate(Item item, int positionToUpdate){
+        editTextName.setText(item.getName());
+        editTextAddress.setText(item.getAddress());
+        editTextPhone.setText(item.getPhone());
+        spinner.setSelection(positionToUpdate);
+
+    }
+
     public void btnSaveInfoClick(View view){
         Item newItem = newItem();
-        Singleton.getInstance().CreatedItem(newItem);
+        if(isUpdate){
+            Singleton.getInstance().updateItem(newItem);
+        }else{
+            Singleton.getInstance().CreatedItem(newItem);
+        }
         Toast.makeText(this, R.string.alert_success_item_created, Toast.LENGTH_SHORT).show();
         super.onBackPressed();
 

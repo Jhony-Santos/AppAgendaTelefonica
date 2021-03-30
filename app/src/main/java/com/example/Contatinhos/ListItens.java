@@ -24,11 +24,14 @@ public class ListItens extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Singleton.getInstance().itemIndex=position;
+                Intent intent=new Intent(ListItens.this, activity_data_item.class);
+                startActivity(intent);
 
             }
         });
 
-            updateList();
+        updateList();
     }
 
     protected void updateList(){
@@ -48,10 +51,9 @@ public class ListItens extends AppCompatActivity {
     }
 
     public void buttonAddClicked(View view){
+        Singleton.getInstance().itemIndex=-1;
         Intent intent= new Intent(ListItens.this, activity_data_item.class);
         startActivity(intent);
     }
-
-
 
 }

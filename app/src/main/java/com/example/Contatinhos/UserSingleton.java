@@ -6,19 +6,15 @@ public class UserSingleton {
 
     private static UserSingleton instante = new UserSingleton();
 
-    public ArrayList<User> userDetails=new ArrayList<>();
-    private int userIndex;
+    public ArrayList<User> userList=new ArrayList<>();
+    public User currentUser;
+    public int userIndex;
 
-    private UserSingleton(){
-        userIndex=0;
-        userDetails.add(new User("jhonatan","jhonatan"));
-    }
+    private UserSingleton(){ }
 
     public User getCurrentUser(){
-        return userDetails.get(userIndex);
-    }
-    public String getIndexString(){
-        return "" + (userIndex + 1) +"/" + userDetails.size();
+        currentUser=userList.get(userIndex);
+        return currentUser;
     }
 
     public static UserSingleton getInstance(){
