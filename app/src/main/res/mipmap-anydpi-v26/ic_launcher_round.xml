@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <item name="com.google.android.material.tabs.TabLayout int getTabGravity()">
+        <annotation name="androidx.annotation.IntDef">
+            <val
+                name="flag"
+                val="true" />
+            <val
+                name="value"
+                val="{com.google.android.material
