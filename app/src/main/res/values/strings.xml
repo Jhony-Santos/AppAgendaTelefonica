@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AppAgenda</string>
+    <string name="nome">hint</string>
+    <string name="nome_usuario">nome_usuario</string>
+    <string name="senha_usuario">senha_usuario</string>
+    <string name="btn_entrar">Button</string>
+    <string name="btn_cadastrar">CADASTRAR</string>
+    <string name="cadastro_usuário">CADASTRO USUÁRIO</string>
+    <string name="tela_de_login">tela de login</string>
+    <string name="senha">Senha</string>
+    <string name="Nome">Nome</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="alert_error_auth" />
+    <string name="cadastro">CADASTRO</string>
+    <string name="nome_usuario_cadastrar">nome usuario</string>
+    <string name="senha_usuario_cadastro">senha usuario</string>
+    <string name="salvar">SALVAR</string>
+    <string name="SENHA">hint</string>
+    <string name="alert_success_user_created" />
+    <string name="adicionar">Adicionar</string>
+    <string name="alert_success_item_created_updated" />
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".atividade_cadastrar">
+
+    <Button
+        android:id="@+id/btn_salvar_cadastro"
+        android:layout_width="244dp"
+        android:layout_height="74dp"
+        android:onClick="salvarUsuario"
+        android:text="@string/salvar"
+        app:layout_constraintEnd_toEndOf="@+id/senha_usuario_cadastro"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="@+id/senha_usuario_cadastro"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <TextView
+        android:id="@+id/CADASTRO"
+        android:layout_width="202dp"
+        android:layout_height="43dp"
+        android:text="@string/cadastro"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nome_usuario_cadastro"
+        android:layout_width="309dp"
+        android:layout_height="61dp"
+        android:hint="@string/nome_usuario_cadastrar"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/CADASTRO"
+        app:layout_constraintHorizontal_bias="0.335"
+        app:layout_constraintStart_toStartOf="@+id/CADASTRO"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/senha_usuario_cadastro"
+        android:layout_width="325dp"
+        android:layout_height="53dp"
+        android:hint="@string/SENHA"
+        android:text="senha usuario"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/nome_usuario_cadastro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nome_usuario_cadastro"
+        tools:layout_editor_absoluteY="297dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
